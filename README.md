@@ -1,4 +1,4 @@
-Reactlet Treeview
+Reactlet Carousel
 =================
 
 Reactlet carousel component
@@ -7,7 +7,7 @@ Reactlet carousel component
 
 ```
 <link rel="stylesheet" href="/component/common/common-style.css"/>
-<link rel="stylesheet" href="/component/treeview/treeview.css"/>
+<link rel="stylesheet" href="/component/carousel/carousel.css"/>
 
 <script src="/library/react/react.js"></script>
 <script src="/library/react/JSXTransformer.js"></script>
