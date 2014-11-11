@@ -1,9 +1,9 @@
 Reactlet Treeview
 =================
 
-Reactlet treeview component
+Reactlet carousel component
 
-![Treeview file system example](res/treeview-filesystem.png)
+![Treeview file system example](res/reactlet-carousel-demo.png)
 
 ```
 <link rel="stylesheet" href="/component/common/common-style.css"/>
@@ -12,46 +12,21 @@ Reactlet treeview component
 <script src="/library/react/react.js"></script>
 <script src="/library/react/JSXTransformer.js"></script>
 <script type="text/jsx" src="/component/common/common-mixin.js"></script>
-<script type="text/jsx" src="/component/treeview/treeview.js"></script>
-
-app.tree4Data = {
-    treedata: [
-        {
-            "name": "website",
-            "iconClass": "fa fa-folder-o",
-            "children": [
-                {
-                    "name": "images",
-                    "iconClass": "fa fa-folder-o",
-                    "children": [
-                        {
-                            "name": "logo.png",
-                            "iconClass": "fa fa-file-image-o"
-                        },
-                        {
-                            "name": "background.png",
-                            "iconClass": "fa fa-file-image-o"
-                        }
-                    ]
-                },
-                {
-                    "name": "index.html",
-                    "iconClass": "fa fa-file-text-o"
-                },
-                {
-                    "name": "about.html",
-                    "iconClass": "fa fa-file-text-o"
-                },
-                {
-                    "name": "product.html",
-                    "iconClass": "fa fa-file-text-o"
-                }
-            ]
-        }
+<script type="text/jsx" src="/component/carousel/carousel.js"></script>
+<script type="text/jsx">
+var app = app || {};
+app.component1Data = {
+    items: [
+        { image:'/image/sample/desert.jpg', text:'slide 1' },
+        { image:'/image/sample/lighthouse.jpg', text:'slide 2' },
+        { image:'/image/sample/fallmum.jpg', text:'slide 3' },
+        { image:'/image/sample/jellyfish.jpg', text:'slide 4' },
+        { image:'/image/sample/koala.jpg', text:'slide 5' }
     ]
 };
-app.treeview4 = React.renderComponent(
-    <Treeview data={ app.tree4Data } />,
-    document.getElementById('treeview4')
+app.component1 = React.render(
+    <Carousel data={ app.component1Data } />,
+    document.getElementById('component1')
 );
+</script>
 ```
